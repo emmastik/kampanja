@@ -1,6 +1,8 @@
 import './App.css';
 import { Card, CardContent } from '@mui/material';
 import * as React from 'react';
+import TabToolbar from './modules/tabToolbar.js';
+import Chat from './modules/chat.js';
 
 
 function App() {
@@ -12,12 +14,12 @@ function App() {
       </header>
       <Card sx={{ width: "45%", ml: 3 }}> 
         <CardContent>
-          
+          <TabToolbar />
         </CardContent>
       </Card>
       <Card sx={{mt: 6, ml: 3, width: "45%"}}>
         <CardContent>
-          
+          <Chat />
         </CardContent>
       </Card>
       <div>
