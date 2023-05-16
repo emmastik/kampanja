@@ -48,3 +48,11 @@ html {
 .input-button:hover {
   background-color: #7e9790;
 }
+
+.message {
+  padding: 10px;
+  transition: background-color 0.5s ease;
+  border: 1px solid #f2f2f2;
+  width: 100%;
+  max-width: 400px;
+}

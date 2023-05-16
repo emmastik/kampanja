@@ -1,17 +1,22 @@
 import '../App.css';
 import * as React from 'react';
 import { TextField } from '@mui/material';
-import Message from "./message.js"
+import MessageList from "./messageList.js";
 
 
 function Chat() {
-    const [message, setMessage] = React.useState("");
     const [messages, setMessages] = React.useState([]);
-    const [user, setUser] = React.useState("");
-    const [inputState, setInputState] = React.useState("");
+    const [inputStateUser, setInputStateUser] = React.useState("");
+    const [inputStateMessage, setInputStateMessage] = React.useState("");
 
-    function sendMessage() {
-
+    function sendMessage(user, message) {
+        setMessages([...messages, 
+            {
+            user: user,
+            message: message,
+            id: messages.length + 1
+            }
+        ]);
     }
 
     return (
@@ -20,21 +25,31 @@ function Chat() {
                 id="user"
                 placeholder="Käyttäjänimi"
                 multiline
+                value={inputStateUser}
+                onChange={(event) => setInputStateUser(event.target.value)}
             />
             <TextField
                 id="message"
                 placeholder="Viesti"
                 multiline
+                value={inputStateMessage}
+                onChange={(event) => setInputStateMessage(event.target.value)}
             />
             <button
                 className="input-button"
                 onClick={() => {
-                sendMessage()
-                setInputState("");
+                sendMessage(inputStateUser, inputStateMessage)
+                setInputStateUser("");
+                setInputStateMessage("");
                 }}
             >
                 Lähetä
             </button>
+            <div>
+                <MessageList 
+                    messageItems={messages}
+                />
+            </div>
         </div>    
     )
 }

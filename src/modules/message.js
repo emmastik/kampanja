@@ -4,8 +4,10 @@ import { Card } from '@mui/material';
 
 const Message = (props) => {
     return (
-        <Card sx={{backgroundColor: "red"}}>
-            
+        <Card>
+            <div className="message">
+                {props.user}: {props.message}
+            </div>
         </Card>
     )
 }
