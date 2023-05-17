@@ -24,6 +24,13 @@ html {
   font-size: 17px !important;
 }
 
+.fontTitle {
+  font-family: Cormorant !important; 
+  font-size: 20px !important;
+  font-weight: bold !important;
+  color: #315047;
+}
+
 .css-19kzrtu {
   padding: 0 !important;
 }
@@ -49,10 +56,23 @@ html {
   background-color: #7e9790;
 }
 
+.deleteBtn {
+  width: 20px;
+  height: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.editBtn {
+  width: 20px;
+  height: 20px;
+  margin-left: 60px;
+  cursor: pointer;
+}
+
 .message {
   padding: 10px;
   transition: background-color 0.5s ease;
   border: 1px solid #f2f2f2;
   width: 100%;
-  max-width: 400px;
 }

@@ -1,11 +1,11 @@
 import '../App.css';
 import * as React from 'react';
-import { TextField } from '@mui/material';
+import { TextField, Typography } from '@mui/material';
 import MessageList from "./messageList.js";
 
 
 function Chat() {
-    const [messages, setMessages] = React.useState([]);
+    var [messages, setMessages] = React.useState([]);
     const [inputStateUser, setInputStateUser] = React.useState("");
     const [inputStateMessage, setInputStateMessage] = React.useState("");
 
@@ -19,8 +19,21 @@ function Chat() {
         ]);
     }
 
+    function deleteMessage(id) {
+        messages = messages.filter((item) => item.id !== id);
+        setMessages(messages);
+    }
+
+    function editMessage(id) {
+        
+    }
+
+      
     return (
         <div>
+            <Typography className="fontTitle" sx={{ mt: 2, mb: 2}}>
+                Chat - jätä kommentti kampanjasivulle tai regoi toisen kommenttiin!
+            </Typography>
             <TextField
                 id="user"
                 placeholder="Käyttäjänimi"
@@ -48,6 +61,7 @@ function Chat() {
             <div>
                 <MessageList 
                     messageItems={messages}
+                    deleteMessage={deleteMessage}
                 />
             </div>
         </div>    

@@ -10,6 +10,7 @@ const MessageList = (props) => {
             user={item.user}
             message={item.message}
             id={item.id}
+            deleteMessage={props.deleteMessage}
             />
         </div>
         
