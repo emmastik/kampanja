@@ -45,14 +45,14 @@ function Chat() {
             </Typography>
             <TextField
                 id="user"
-                placeholder="Käyttäjänimi*"
+                placeholder="Käyttäjänimi *"
                 value={inputStateUser}
                 onChange={(event) => setInputStateUser(event.target.value)}
             />
             <TextField
                 sx={{ml: 2}}
                 id="message"
-                placeholder="Viesti*"
+                placeholder="Viesti *"
                 multiline
                 value={inputStateMessage}
                 onChange={(event) => setInputStateMessage(event.target.value)}

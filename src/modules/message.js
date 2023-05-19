@@ -42,10 +42,16 @@ const Message = (props) => {
                     </>
                     ) : (
                         <Grid container direction="row" justifyContent="center">
-                            <Grid item xs={4} lg={4}>
-                                {props.user + ": " + props.message}
-                            </Grid>
-                            <Grid item xs={3} lg={3}>
+                            {(props.message.includes(" ")) ? (
+                                <Grid item xs={8} lg={6} className='keepText'>
+                                    {props.user + ": " + props.message}
+                                </Grid>
+                            ) : (
+                                <Grid item xs={8} lg={6} className='breakText'>
+                                    {props.user + ": " + props.message}
+                                </Grid>
+                            )}
+                            <Grid item xs={4} lg={2}>
                                 <img
                                     src="./images/editBtn.png"
                                     alt="edit button"
@@ -63,7 +69,7 @@ const Message = (props) => {
                                     onClick={() => props.deleteMessage(props.id)}
                                 />
                             </Grid>
-                            <Grid item xs={6} lg={2}>
+                            <Grid item xs={6} lg={3}>
                                 <Box
                                     sx={{
                                         '& > legend': { mt: 2 }

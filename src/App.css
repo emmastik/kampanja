@@ -64,6 +64,17 @@ html {
   background-color: #eefaf5;
 }
 
+.breakText {
+  text-align: justify;
+  word-break: break-all;
+}
+
+.keepText {
+  text-align: justify;
+  word-break: keep-all;
+}
+
+
 @media screen and (max-width: 400px) {
   .deleteBtn {
     width: 17px;
