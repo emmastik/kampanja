@@ -1,5 +1,5 @@
 import './App.css';
-import { Card, CardContent, Grid, ImageList, ImageListItem, ImageListItemBar } from '@mui/material';
+import { Card, CardContent, Grid } from '@mui/material';
 import * as React from 'react';
 import TabToolbar from './modules/tabToolbar.js';
 import Chat from './modules/chat.js';
@@ -7,24 +7,14 @@ import Chat from './modules/chat.js';
 
 // Main app function, shows all content on the page
 function App() {
-  const itemData = [
-    {
-      img: "./images/cleo.JPG",
-      title: "Cleo",
-    },
-    {
-      img: "./images/harmi.JPG",
-      title: "Harmi"
-    },
-  ];
-
+  /* Includes components and modules for the info panel with tabs, chat and kitty pictures */
   return (
     <div className="App">
       <header className="header">
         <h2 style={{marginLeft: "3vw"}}>Adoptoi lemmikki, älä osta<br></br>-kampanjasivu</h2>
       </header>
       <Grid container direction="row" justifyContent="flex-start"> 
-        <Grid item xs={10} lg={6}>
+        <Grid item xs={10} md={6} lg={6}>
           <Card sx={{ minWidth: "45%", maxWidth: "90%", ml: 3 }}> 
             <CardContent>
               <TabToolbar />
@@ -36,23 +26,17 @@ function App() {
             </CardContent>
           </Card>
         </Grid>
-        <Grid item xs={5} lg={5}>
-          <ImageList sx={{width: "100%", height: "100%" }} cols={2}>
-            {itemData.map((item) => (
-              <ImageListItem key={item.img}>
-                <img
-                  src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                  alt={item.title}
-                  loading="lazy"
-                />
-                <ImageListItemBar 
-                  sx={{background: "transparent"}}
-                  title={item.title}
-                  position='top'
-                />
-              </ImageListItem>
-            ))}
-          </ImageList>
+        <Grid item xs={5} lg={5} sx={{display: "flex"}}>
+          <img
+            src="./images/cleo.JPG"
+            alt="Cleo"
+            className='imgCleo'
+          />
+          <img
+            src="./images/harmi.JPG"
+            alt="Harmi"
+            className='imgHarmi'
+          />
         </Grid>
       </Grid>
     </div> 

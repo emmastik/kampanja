@@ -74,7 +74,7 @@ function TabToolbar() {
 
           "Adoptoi, älä osta" -kampanjavideon löydät viimeiseltä välilehdeltä - käy katsomassa!<br/>
           Alta löydät myös chatin, johon voit laittaa kommenttia tai kysymyksiä sekä tykätä muiden viesteistä.<br/>
-          Vierestä löydät myös videossa vierailevan Harmin sekä ystäväni rescue -kissan Cleon.
+          Vierestä (pienellä näytöllä alhaalta) löydät myös videossa vierailevan Harmin sekä ystäväni rescue -kissan Cleon.
         </Typography>
       </TabPanel>
       <TabPanel value={value} index={1}>

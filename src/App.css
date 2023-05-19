@@ -42,9 +42,10 @@ html {
 .inputBtn {
   height: 35px;
   padding: 0px 20px;
+  margin-top: 10px;
+  margin-left: 10px;;
   font-family: Cormorant;
   font-size: 18px;
-  margin: 0 0 0 10px;
   background-color: #BBD4CD;
   border: 0;
   border-radius: 2px;
@@ -142,5 +143,67 @@ html {
     height: 20px;
     margin-left: 2%;
     cursor: pointer;
+  }
+  
+}
+
+/* Scale kitty pictures according to the screen/browser width */
+
+@media screen and (max-width: 901px) {
+  .imgCleo {
+    margin-top: 20%;
+    margin-left: 15%;
+    width: 100%;
+    height: 100%;
+  }
+
+  .imgHarmi {
+    margin-top: 20%;
+    margin-left: 5%;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1198px) {
+  .imgCleo {
+    width: 35%;
+    height: 48%;
+    float: left;
+    display: flex;
+    position: fixed;
+    top: 15%;
+    right: 15%;
+    z-index: 1;
+  }
+
+  .imgHarmi {
+    width: 35%;
+    height: 48%;
+    display: flex;
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .imgCleo {
+    width: 30%;
+    height: 58%;
+    float: left;
+    display: flex;
+    position: fixed;
+    top: 3%;
+    z-index: 1;
+  }
+
+  .imgHarmi {
+    width: 30%;
+    height: 58%;
+    display: flex;
+    position: fixed;
+    right: 2%;
+    bottom: 5%;
   }
 }
