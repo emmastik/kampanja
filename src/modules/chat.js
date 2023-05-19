@@ -24,24 +24,33 @@ function Chat() {
         setMessages(messages);
     }
 
-    function editMessage(id) {
+    function editMessage(id, newMessage) { 
+        setMessages(messages.map((message) => {
+            if (message.id === id) {
+                return {
+                    ...message,
+                    message: newMessage
+                }
+            }
+            return message;
+        }))
         
     }
 
       
     return (
         <div>
-            <Typography className="fontTitle" sx={{ mt: 2, mb: 2}}>
-                Chat - jätä kommentti kampanjasivulle tai regoi toisen kommenttiin!
+            <Typography className="fontTitle" sx={{ mt: 1, mb: 2}}>
+                Chat
             </Typography>
             <TextField
                 id="user"
                 placeholder="Käyttäjänimi"
-                multiline
                 value={inputStateUser}
                 onChange={(event) => setInputStateUser(event.target.value)}
             />
             <TextField
+                sx={{ml: 2}}
                 id="message"
                 placeholder="Viesti"
                 multiline
@@ -49,7 +58,7 @@ function Chat() {
                 onChange={(event) => setInputStateMessage(event.target.value)}
             />
             <button
-                className="input-button"
+                className="inputBtn"
                 onClick={() => {
                 sendMessage(inputStateUser, inputStateMessage)
                 setInputStateUser("");
@@ -58,10 +67,12 @@ function Chat() {
             >
                 Lähetä
             </button>
+            {JSON.stringify(messages)}
             <div>
                 <MessageList 
                     messageItems={messages}
                     deleteMessage={deleteMessage}
+                    editMessage={editMessage}
                 />
             </div>
         </div>    

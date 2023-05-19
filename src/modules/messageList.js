@@ -7,10 +7,11 @@ const MessageList = (props) => {
     const items = props.messageItems.map(item => (
         <div key={item.id}>
             <Message 
-            user={item.user}
-            message={item.message}
-            id={item.id}
-            deleteMessage={props.deleteMessage}
+                user={item.user}
+                message={item.message}
+                id={item.id}
+                deleteMessage={props.deleteMessage}
+                editMessage={props.editMessage}
             />
         </div>
         
