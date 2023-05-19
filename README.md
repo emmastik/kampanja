@@ -1,3 +1,11 @@
+Projektin saa ajettua näillä ohjeilla:
+Kloonaa projekti omalle laitteellesi
+Aja terminaalissa (projektin kansiossa) npm install
+Ja lopuksi aja npm start
+
+
+Reactin omat ohjeet:
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
