@@ -44,7 +44,7 @@ function Chat() {
       
     return (
         /* Includes all components for the chat, including input fields, send button and messages */
-        <div>
+        <div style={{marginBottom: "20px"}}>
             <Typography className="fontTitle" sx={{ mt: 1, mb: 2}}>
                 Chat
             </Typography>

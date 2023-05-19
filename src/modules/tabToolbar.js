@@ -66,7 +66,7 @@ function TabToolbar() {
         <Tab label="Linkkejä" {...a11yProps(2)} />
         <Tab label="Kampanjavideo" {...a11yProps(3)} />
       </Tabs>
-      <TabPanel value={value} index={0} sx={{ mt: 3, mb: 3}}>
+      <TabPanel value={value} index={0}>
         Löytöeläimien määrä on ongelma kaikkialla maailmassa, myös Suomessa. Meillä Suomessakin
         on paljon eläimiä, jotka on löydetty yksin luonnosta kulkemasta tai muuten otettu hoitoon
         ja tarvitsevat näin kotia sekä hoivaa.<br/><br/>
@@ -75,7 +75,7 @@ function TabToolbar() {
         Alta löydät myös chatin, johon voit laittaa kommenttia tai kysymyksiä sekä tykätä muiden viesteistä.<br/>
         Vierestä (pienellä näytöllä alhaalta) löydät myös videossa vierailevan Harmin sekä ystäväni rescue -kissan Cleon.
       </TabPanel>
-      <TabPanel value={value} index={1} className="font" sx={{ mt: 3, mb: 3}}>
+      <TabPanel value={value} index={1} className="font">
         Miten mahdollista?<br/>
         Suomesta löytyy eri paikkakunnilta adoptoimiseen mahdollistavia keskuksia, kuten 
         löytö- ja sijaiseläinkoteja, joihin voi hakemusta lemmikin adoptoimisesta lähettää.
@@ -95,7 +95,7 @@ function TabToolbar() {
         Toimintaa mahdollista tukea rahallisesti lahjoituksen muodossa, ostamalla toimintaa 
         tukevia tuotteita sekä osallistumalla tarvikekeräyksiin kaupoissa.
       </TabPanel>
-      <TabPanel value={value} index={2} className="font" sx={{ mt: 3, mb: 3}}>
+      <TabPanel value={value} index={2} className="font">
         Yleistä tietoa löytöeläimistä sekä adoptoimisesta:<br/>
         Suomen eläinsuojelu: 
           <a href="https://sey.fi/" target="_blank" rel="noopener noreferrer">sey.fi</a><br/>
