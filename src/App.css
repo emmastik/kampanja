@@ -19,7 +19,7 @@ html {
   background: linear-gradient(to left, #BBD4CD 50%, #FCFCFC 50%);
 }
 
-.font {
+p {
   font-family: Cormorant !important; 
   font-size: 17px !important;
 }
