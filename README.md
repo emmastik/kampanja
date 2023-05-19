@@ -1,7 +1,7 @@
 Projektin saa ajettua näillä ohjeilla:
-Kloonaa projekti omalle laitteellesi
-Aja terminaalissa (projektin kansiossa) npm install
-Ja lopuksi aja npm start
+1. Kloonaa projekti omalle laitteellesi
+2. Aja terminaalissa (projektin kansiossa) npm install
+3. Ja lopuksi aja npm start
 
 
 Reactin omat ohjeet:
