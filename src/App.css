@@ -36,10 +36,10 @@ html {
 }
 
 .css-46bh2p-MuiCardContent-root {
-  padding: 10px !important;
+  padding: 1.5% !important;
 }
 
-.input-button {
+.inputBtn {
   height: 35px;
   padding: 0px 20px;
   font-family: Cormorant;
@@ -52,27 +52,84 @@ html {
   transition: background-color 0.2s ease;
 }
 
-.input-button:hover {
+.inputBtn:hover {
   background-color: #7e9790;
 }
 
-.deleteBtn {
-  width: 20px;
-  height: 20px;
-  margin-left: 10px;
-  cursor: pointer;
-}
-
-.editBtn {
-  width: 20px;
-  height: 20px;
-  margin-left: 60px;
-  cursor: pointer;
-}
-
 .message {
-  padding: 10px;
+  padding: 2%;
   transition: background-color 0.5s ease;
   border: 1px solid #f2f2f2;
   width: 100%;
+  background-color: #eefaf5;
 }
+
+@media screen and (max-width: 400px) {
+  .deleteBtn {
+    width: 8%;
+    height: 8%;
+    margin-left: 1.5%;
+    cursor: pointer;
+  }
+  
+  .editBtn {
+    width: 8%;
+    height: 8%;
+    margin-left: 6%;
+    cursor: pointer;
+  }
+  
+  .doneBtn {
+    width: 8%;
+    height: 8%;
+    margin-left: 2%;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 400px) and (max-width: 900px) {
+  .deleteBtn {
+    width: 4%;
+    height: 4%;
+    margin-left: 1.5%;
+    cursor: pointer;
+  }
+  
+  .editBtn {
+    width: 4%;
+    height: 4%;
+    margin-left: 6%;
+    cursor: pointer;
+  }
+  
+  .doneBtn {
+    width: 4%;
+    height: 4%;
+    margin-left: 2%;
+    cursor: pointer;
+  }
+}
+
+@media screen and (min-width: 900px)  {
+  .deleteBtn {
+    width: 2.5%;
+    height: 2.5%;
+    margin-left: 1.5%;
+    cursor: pointer;
+  }
+  
+  .editBtn {
+    width: 2.5%;
+    height: 2.5%;
+    margin-left: 6%;
+    cursor: pointer;
+  }
+  
+  .doneBtn {
+    width: 2.5%;
+    height: 2.5%;
+    margin-left: 2%;
+    cursor: pointer;
+  }
+}
+

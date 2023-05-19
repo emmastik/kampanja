@@ -67,7 +67,6 @@ function Chat() {
             >
                 Lähetä
             </button>
-            {JSON.stringify(messages)}
             <div>
                 <MessageList 
                     messageItems={messages}
