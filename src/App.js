@@ -5,6 +5,7 @@ import TabToolbar from './modules/tabToolbar.js';
 import Chat from './modules/chat.js';
 
 
+// Main app function, shows all content on the page
 function App() {
   const itemData = [
     {

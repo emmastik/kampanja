@@ -4,11 +4,13 @@ import { TextField, Typography } from '@mui/material';
 import MessageList from "./messageList.js";
 
 
+// Main function for the chat component
 function Chat() {
-    var [messages, setMessages] = React.useState([]);
-    const [inputStateUser, setInputStateUser] = React.useState("");
-    const [inputStateMessage, setInputStateMessage] = React.useState("");
+    var [messages, setMessages] = React.useState([]); // hook for message list
+    const [inputStateUser, setInputStateUser] = React.useState(""); // hook for username input field
+    const [inputStateMessage, setInputStateMessage] = React.useState(""); //hook for message input field
 
+    // Function that adds message to messages array when send button is clicked
     function sendMessage(user, message) {
         setMessages([...messages, 
             {
@@ -19,11 +21,13 @@ function Chat() {
         ]);
     }
 
+    // Function that deletes message when delete button is clicked
     function deleteMessage(id) {
         messages = messages.filter((item) => item.id !== id);
         setMessages(messages);
     }
 
+    // Function that allows message text editing when edit button is clicked
     function editMessage(id, newMessage) { 
         setMessages(messages.map((message) => {
             if (message.id === id) {
@@ -39,6 +43,7 @@ function Chat() {
 
       
     return (
+        /* Includes all components for the chat, including input fields, send button and messages */
         <div>
             <Typography className="fontTitle" sx={{ mt: 1, mb: 2}}>
                 Chat

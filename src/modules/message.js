@@ -5,9 +5,10 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 
 
-const Message = (props) => {
-    const [edit, setEdit] = React.useState(false);
-    const [newMessageInput, setNewMessageInput] = React.useState("")
+// Function for individual messages containing all components of a message
+function Message(props) {
+    const [edit, setEdit] = React.useState(false); // hook for edit status
+    const [newMessageInput, setNewMessageInput] = React.useState("") // hook for edited message input status
 
     const StyledRating = styled(Rating)({
         '& .MuiRating-iconFilled': {
@@ -20,6 +21,9 @@ const Message = (props) => {
 
 
     return (
+        /* Shows message (+ edit, delete, rating buttons) if edit is false, 
+         and message editing text field (+ done button) if edit is true 
+        */
         <Card sx={{mt: 1}}>
             <div className="message">
                 {edit ? (

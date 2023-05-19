@@ -3,7 +3,8 @@ import * as React from 'react';
 import Message from "./message.js"
 
 
-const MessageList = (props) => {
+// Function for listing all messages on chat component
+function MessageList(props) {
     const items = props.messageItems.map(item => (
         <div key={item.id}>
             <Message 

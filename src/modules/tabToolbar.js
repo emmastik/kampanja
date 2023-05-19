@@ -4,6 +4,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 
 
+// MUI's function for creating a panel with tabs
 function TabPanel(props) {
     const { children, value, index, ...other } = props;
   
@@ -37,14 +38,16 @@ function TabPanel(props) {
     };
 }
 
-const TabToolbar = () => {
-  const [value, setValue] = React.useState(0);
+// Main function for the info panel with tabs. Creates the information on each tab
+function TabToolbar() {
+  const [value, setValue] = React.useState(0); // hook for tabs
 
   const handleChange = (event, newValue) => {
       setValue(newValue);
   };
 
   return (
+    /* Includes all text components and a video component in different tabs */
     <Box sx={{ width: '100%' }}>
       <Tabs
         value={value}
@@ -70,7 +73,8 @@ const TabToolbar = () => {
           ja tarvitsevat näin kotia sekä hoivaa.<br/><br/>
 
           "Adoptoi, älä osta" -kampanjavideon löydät viimeiseltä välilehdeltä - käy katsomassa!<br/>
-          Alta löydät myös chatin, johon voit laittaa kommenttia tai kysymyksiä sekä tykätä muiden viesteistä. 
+          Alta löydät myös chatin, johon voit laittaa kommenttia tai kysymyksiä sekä tykätä muiden viesteistä.<br/>
+          Vierestä löydät myös videossa vierailevan Harmin sekä ystäväni rescue -kissan Cleon.
         </Typography>
       </TabPanel>
       <TabPanel value={value} index={1}>

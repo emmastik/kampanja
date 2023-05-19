@@ -74,6 +74,7 @@ html {
   word-break: keep-all;
 }
 
+/* Scale message functionality buttons according to the screen/browser size */
 
 @media screen and (max-width: 400px) {
   .deleteBtn {
